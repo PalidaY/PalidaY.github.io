@@ -1,3 +1,3 @@
 # Portfolio Website
 
-https://paliday.github.io/palida.github.io/
+https://paliday.github.io/
