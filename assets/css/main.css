@@ -2448,6 +2448,8 @@ input, select, textarea {
 
 	#main {
 		margin-bottom: 0;
+		padding-left: 5%;
+		padding-right: 5%;
 	}
 
 		#main section:first-of-type {
