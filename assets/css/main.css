@@ -25,8 +25,10 @@ section, summary, time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;}
 
+
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
+	margin: 0 auto; /* Center align the image horizontally */	
 	display: block;}
 
 body {
@@ -1815,7 +1817,7 @@ input, select, textarea {
 				margin: 0 auto;
 				width: auto;
 			}
-
+	
 /* List */
 
 	ul {
