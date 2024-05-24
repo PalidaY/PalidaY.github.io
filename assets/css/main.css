@@ -1785,6 +1785,8 @@ input, select, textarea {
 		display: inline-block;
 		border: 0;
 		outline: 0;
+		transition: -webkit-transform 0.25s ease;
+		transition: transform 0.25s ease;
 	}
 
 		.image img {
@@ -1796,7 +1798,11 @@ input, select, textarea {
 			display: block;
 			width: 100%;
 		}
-
+	
+		.image:active {
+			-webkit-transform: scale(2);
+			transform: scale(2);
+		}
 		.image.featured {
 			display: block;
 			width: 100%;
