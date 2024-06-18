@@ -86,7 +86,7 @@ input, select, textarea {
 
 	body {
 		background: #f0f4f4;
-		color: #444444;
+		color: #000000;
 		font-size: 15pt;
 		line-height: 1.85em;
 		font-family: 'Source Sans Pro', sans-serif;
@@ -2063,7 +2063,7 @@ input, select, textarea {
 	.button {
 		position: relative;
 		display: inline-block;
-		background: #df7366;
+		background: #2e74e6;
 		color: #fff;
 		text-align: center;
 		border-radius: 0.5em;
@@ -2085,9 +2085,8 @@ input, select, textarea {
 		button:hover,
 		.button:hover {
 			color: #fff;
-			background: #ef8376;
+			background: #6396e7;
 		}
-
 		input[type="button"].alt,
 		input[type="submit"].alt,
 		input[type="reset"].alt,
