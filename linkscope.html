@@ -7,7 +7,7 @@
 <html>
 
 <head>
-    <title>LinkScopePalida.Y</title>
+    <title>LinkScopePalida.Y</title>    
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
@@ -56,51 +56,101 @@
                         </p>
                     </header>
                 </article>
-                <article id="main" class="col-4 col-12-mobile special">
+                <article id="main" class="col-6 col-12-mobile special">
                     <header>
                         <a href="/filespdf/LinkScope_paper.pdf" class="button">Paper</a>
                         <br>
-                        
+
                     </header>
                     <br>
-                    <h3>
-                        <header>Model Development</header>
-                    </h3>
                     <p>
-                    In the Model Development phase, the goal is to develop a model that can meet the predefined
-                    requirements set initially. This process involves data preparation, feature engineering and
-                    experimentation, and model selection and deployment.
+                        LinkScope is my senior project at Chulalongkorn University, where I am responsible for both the machine learning model and backend development.
+                        The project aims to provide an effective phishing detection solution through two main
+                        components: Model Development and Web Application. The Model Development focuses on training a
+                        machine learning model to distinguish between legitimate and phishing URLs. The Web Application
+                        provides a user-friendly interface for accessing these detection functionalities.
+                        <br>
                     </p>
 
-                    <br>
-                    <h4>Data Preparation.</h4>
-                    The process begins with data preparation, which involves data aggregation, balancing and
-                    preprocessing. Then, feature extraction is performed in a Python environment using Jupyter Notebooks
-                    hosted on AWS Sagemaker. AWS SageMaker is chosen because of its high computing power, allowing for
-                    comprehensive URL extraction, as well as its robust security features.
-
-
-                    <br><br>
-                    <h4>Feature Engineering and Experimentation</h4>
-                    The extracted features undergo experiments for feature selection and model training. The best model
-                    among all candidates is then selected for deployment in the web application. The chosen model uses
-                    the Random Forest algorithm and Particle Swarm Optimization for feature selection.
-                    <br><br>
-
-                    <h4>Model Selection and Deployment</h4>
-                    The selected model is serialized into a pickle format for later use in the backend application,
-                    which will serve as the interface between the frontend application and the database.
-
-                    </p>
-                    <br>
                     <p>
-                    Random Forest with Particle Swarm Optimization emerges as the best compromise, achieving 96.13% accuracy with a reasonable
-                    processing time of 11.49 seconds. This combination provides a balanced trade-off between accuracy
-                    and speed, making it an optimal choice for reliable performance without excessive computational
+                    <h4>Model Development</h4>
+                    <i>1. Data Preparation:</i> The process begins with data
+                    preparation, which involves data aggregation, balancing and preprocessing. Then, feature extraction
+                    is performed. <br>
+                    <i>2. Feature Engineering and Experimentation:</i> Extracted
+                    features undergo experiments for feature selection and model training. The best model among all
+                    candidates is then selected for deployment in the web application. The chosen model uses the
+                    LightGBM algorithm and Recursive Feature Elimination with Cross-Validation (RFECV) for feature
+                    selection. <br>
                     </p>
-                    demands.
+                    
+                    <p>
+                    <h4>Model Result</h4>
+                    The results are obtained from applying the machine learning algorithms with different feature
+                    selection approaches. In order to select the best model for the web application, LightGBM is chosen
+                    for its high accuracy, leading among proposed algorithms : Random Forest, LightGBM, SVC.
+                    </p>
+                    <div class="row" id="main">
+                        <article class="col-6 col-12-mobile special">
+                            <h4>
+                                <center>Accuracy of each model by Feature Selection Approaches.</center>
+                            </h4>
+                            <a class="image featured"><img src="images/ML/accuracy.png" alt="" /></a>
+                        </article>
+                    </div>
+                    <article id="main" class="col-6 col-12-mobile special"></article>
+                    <p>
+                        However, in the context of a web application, processing time is also a critical factor. When
+                        users submit URLs for analysis, the feature extraction process takes time, adding to the overall
+                        latency. This consideration makes it important to balance accuracy with processing time.
+                    </p>
+                    <p>
+                        LightGBM with all features and with RFECV provides approximately the same highest accuracies at
+                        94.61%. However, having all features extracted is a drawback for the web application, where user
+                        experience depends on quick responses. Given this context, LightGBM with RFECV is chosen,
+                        reducing the features to 26.
+                    </p>                    
+                    
+                    <table class="default">
+                        <tr>
+                            <th>Algorithm</th>
+                            <th>Accuracy</th>
+                            <th>Precision</th>
+                            <th>Recall</th>
+                            <th>F1-score</th>
+                        </tr>
+                        <tr>
+                            <td>LightGBM</td>
+                            <td>94.61%</td>
+                            <td>95.68%</td>
+                            <td>93.44%</td>
+                            <td>94.61%</td>
+                        </tr>
+                        <tr>
+                            <td>LightGBM (Hyperparameterized)</td>
+                            <td>95.07%</td>
+                            <td>96.00%</td>
+                            <td>94.05%</td>
+                            <td>95.07%</td>
+                        </tr>
+                    </table>
+                    
+                    <p>
+                        According to above table, the classification results of
+                        LightGBM with RFECV are presented. The hyperparameter
+                        tuning process increased the accuracy to 95.07%. The features
+                        were selected using Recursive Feature Elimination with Cross
+                        Validation (RFECV), resulting in a reduced set of 26 features.
+                        These features include 'domainlength', 'www', 'subdomain',
+                        'https', 'short_url', '@', '-', '=', '.', '_', '/', 'digit', 'log', 'pay', 'web',
+                        'account', 'pcemptylinks', 'pcextlinks', 'pcrequrl', 'zerolink',
+                        'extfavicon', 'submit2email', 'sfh', 'redirection', 'domainage', and
+                        'domainend'. This set of features, along with the
+                        hyperparameterized LightGBM model, is chosen for
+                        deployment in the application.
+                    </p>
                 </article>
-          
+
 
 
                 <div class="main" id="main">
@@ -184,7 +234,8 @@
                     <h3>Contact</h3>
                 </header>
                 <p>poonpalida@gmail.com
-				<br> (+66) 94-683-4445</p>
+                    <br> (+66) 94-683-4445
+                </p>
                 <ul class="icons">
                     <li><a href="https://www.facebook.com/palida.palipoon" class="icon brands fa-facebook-f"><span
                                 class="label">Facebook</span></a></li>

@@ -2016,43 +2016,47 @@ input, select, textarea {
 
 /* Table */
 
-	table {
-		width: 100%;
-	}
+	  table {
+            width: 100%;
+            border-collapse: collapse;
+        }
 
-		table.default {
-			width: 100%;
-		}
+        table.default {
+            width: 100%;
+            border: 1px solid #000; /* Black border for the table */
+        }
 
-			table.default tbody tr {
-				border-top: solid 1px #e5e5e5;
-			}
+        table.default tbody tr {
+            border-top: solid 1px #000; /* Black border for table rows */
+        }
 
-				table.default tbody tr:first-child {
-					border-top: 0;
-				}
+        table.default tbody tr:first-child {
+            border-top: 0;
+        }
 
-				table.default tbody tr:nth-child(2n+1) {
-					background: #fafafa;
-				}
+        table.default tbody tr:nth-child(2n+1) {
+            background: #fafafa;
+        }
 
-			table.default td {
-				padding: 0.5em 1em 0.5em 1em;
-			}
+        table.default td {
+            padding: 0.5em 1em;
+            border: 1px solid #000; /* Black border for table cells */
+        }
 
-			table.default th {
-				text-align: left;
-				font-weight: 400;
-				padding: 0.5em 1em 0.5em 1em;
-			}
+        table.default th {
+            text-align: left;
+            font-weight: 400;
+            padding: 0.5em 1em;
+            border: 1px solid #000; /* Black border for table headers */
+        }
 
-			table.default thead {
-				border-bottom: solid 2px #e5e5e5;
-			}
+        table.default thead {
+            border-bottom: solid 2px #000; /* Black border for table head */
+        }
 
-			table.default tfoot {
-				border-top: solid 2px #e5e5e5;
-			}
+        table.default tfoot {
+            border-top: solid 2px #000; /* Black border for table foot */
+        }
 
 /* Button */
 
