@@ -1,0 +1,203 @@
+<!DOCTYPE HTML>
+<!--
+	Helios by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+    <title>LinkScopePalida.Y</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript>
+        <link rel="stylesheet" href="assets/css/noscript.css" />
+    </noscript>
+</head>
+
+<body class="no-sidebar is-preload">
+    <div id="page-wrapper">
+
+        <!-- Header -->
+        <div id="header">
+
+            <!-- Inner -->
+            <div class="inner">
+                <header>
+                    <h1><a id="logo">Ebay Data Warehouse</a></h1>
+                </header>
+            </div>
+
+            <!-- Nav -->
+            <nav id="nav">
+                <nav id="nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="aboutme.html">About me</a></li>
+                        <li><a href="#footer">Contact</a></li>
+                        <li><a href="index.html#project">Projects</a></li>
+                        <li><a href="index.html#features">Services</a></li>
+                        <li><a href="filespdf/resume.pdf">CV</a></li>
+                    </ul>
+                </nav>
+            </nav>
+
+        </div>
+
+        <!-- Main -->
+        <div class="wrapper style1">
+
+            <class="container">
+                <article id="main" class="special">
+                    <header>
+                        <p>
+                            Ebay Data Warehouse
+                        </p>
+                        <a href="filespdf/EBay_DW_Present.pdf" class="button">Ebay Data Warehouse</a>
+                        <a href="filespdf/Ebay_BI_dashboard .pdf" class="button">Ebay Data Analysis</a>
+                    </header>
+                    <p>
+                        The Ebay Data Warehouse was a final project for the Data Warehousing course. My responsibilities
+                        included designing the warehouse, loading the delivery company dimension with SCD1, and creating
+                        all the QuickSight dashboards.
+                    </p>
+                    <br>
+                </article>
+                <div class="row" id="main">
+                    <article class="col-6 col-12-mobile special">
+                        <h4>
+                            <center>Ebay Data Warehouse</center>
+                        </h4>
+                        <a class="image featured"><img src="images/EbayDW/datawarehouse_design.png" alt="" /></a>
+                    </article>
+                    <article class="col-6 col-12-mobile special">
+                        <h4>
+                            <center>Ebay Data Pipeline </center>
+                        </h4>
+                        <a class="image featured"><img src="images/EbayDW/architecture.png" alt="" /></a>
+                    </article>
+                </div>
+                <article id="main" class="col-6 col-12-mobile special">
+                    <p>
+                        For the data warehouse design, our group developed two business processes: laptop item sales and
+                        the order life cycle. The dimensions used include date, time, user, delivery company, and
+                        laptop. The fact tables are item sales and the order life cycle. We applied concepts of multiple
+                        role dimensions and degenerate dimensions (DD). Additionally, each dimension was assigned a
+                        Slowly Changing Dimension (SCD) type.
+                    </p>
+                    <br>
+                </article>
+                <div class="row" id="main">
+                    <article class="col-6 col-12-mobile special">
+                        <h4>
+                            <center>Data Warehouse Design of Laptop Sales</center>
+                        </h4>
+                        <a class="image featured"><img src="images/EbayDW/4_step_design_1.png" alt="" /></a>
+                    </article>
+                    <article class="col-6 col-12-mobile special">
+                        <h4>
+                            <center>Data Warehouse Design of Order Lifecycle</center>
+                        </h4>
+                        <a class="image featured"><img src="images/EbayDW/4_step_design_2.png" alt="" /></a>
+                    </article>
+                    <article class="col-6 col-12-mobile special">
+                        <h4>
+                            <center>Conformed Bus Matrix</center>
+                        </h4>
+                        <a class="image featured"><img src="images/EbayDW/conformed_bus.png" alt="" /></a>
+                    </article>
+                    <article>
+                        <h4>
+                            <center>SCD</center>
+                        </h4>
+                        <a class="image featured"><img src="images/EbayDW/scd.png" alt="" /></a>
+                    </article>
+                </div>
+
+                <article id="main" class="col-6 col-12-mobile special">
+                    <p> First, the process began with data source preparation and cleaning. I was responsible for
+                        preparing the delivery company source database. The delivery company data was scraped from this
+                        eBay page. After that, the data was preprocessed using Python and then loaded into the source
+                        database using AWS RDS.
+                    </p>
+                    <p>
+                        Once all data was in the source database, I loaded the delivery company source database with
+                        SCD1 using AWS Glue into the data warehouse. Furthermore, I calculated lag measures such as
+                        SoldToShippedLag and ShippedToDeliveredLag using SQL for the order life cycle fact table.
+                    </p>
+                    <br>
+                </article>
+
+                <div class="row" id="main">
+                    <article class="col-6 col-12-mobile special">
+                        <h4>
+                            <center>Load Dimension</center>
+                        </h4>
+                        <a class="image featured"><img src="images/EbayDW/loaddim.png" alt="" /></a>
+                    </article>
+                </div>
+
+                <article id="main" class="col-6 col-12-mobile special">
+                    <p>
+                        After completing the data warehouse, I created two dashboards using AWS QuickSight to analyze
+                        item sales and the order life cycle.
+                    </p>
+                    <br>
+                </article>
+                <div class="row" id="main">
+                    <article class="col-6 col-12-mobile special">
+                        <h4>
+                            <center>Laptop Sales Analysis</center>
+                        </h4>
+                        <a class="image featured"><img src="images/EbayDW/laptop_sales.png" alt="" /></a>
+                    </article>
+                    <article class="col-6 col-12-mobile special">
+                        <h4>
+                            <center>Order LifeCycle Analysis</center>
+                        </h4>
+                        <a class="image featured"><img src="images/EbayDW/lifecycle.png" alt="" /></a>
+                    </article>
+                </div>
+        </div>
+        <hr />
+
+
+    </div>
+
+    <!-- Footer -->
+    <div id="footer">
+        <div class="col-12">
+            <!-- Contact -->
+            <section class="contact">
+                <header>
+                    <h3>Contact</h3>
+                </header>
+                <p>poonpalida@gmail.com</p>
+                <ul class="icons">
+                    <li><a href="https://www.facebook.com/palida.palipoon" class="icon brands fa-facebook-f"><span
+                                class="label">Facebook</span></a></li>
+                    <li><a href="https://github.com/PalidaY" class="icon brands fa-github"><span
+                                class="label">Github</span></a></li>
+                    <li><a href="https://www.linkedin.com/in/palidaying/" class="icon brands fa-linkedin-in"><span
+                                class="label">Linkedin</span></a></li>
+                </ul>
+            </section>
+        </div>
+    </div>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
